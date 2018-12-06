@@ -15,6 +15,14 @@
 			<h:inputText value="#{adminLivrosBean.livro.numeroPaginas}"/>
 			<h:outputLabel value="Preço"/>
 			<h:inputText value="#{adminLivrosBean.livro.preco}"/>
+			
+			<div>
+				<h:outputLabel value="Autores" />
+				<h:selectManyListbox>
+					<f:selectItems var="autor" value="#{adminLivrosBean.autoresId}"
+						itemLabel="#{autor.nome}" itemValue="#{autor.id}"/>
+				</h:selectManyListbox>
+			</div>
 			<h:commandButton value="Cadastrar" action="#{adminLivrosBean.salvar}"/>
 		</div>
 	</h:form>
